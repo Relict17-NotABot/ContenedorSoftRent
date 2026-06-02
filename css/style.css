@@ -1,0 +1,59 @@
+/*afecta a todo*/
+* {box-sizing: border-box;}
+
+/*Html*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*body*/
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  height: auto; 
+  max-width: 1920px;
+  margin: auto;
+  overflow: hidden;
+}
+
+ /*Header*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 100px;
+    height: auto;
+    background: rgba(131, 22, 8, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+header nav{
+  width: 70%;
+}
+
+.navegacion {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.navegacion li{
+  list-style: none;
+}
+
+.navegacion li a{
+  color: black;
+  text-decoration: none;
+}
+
