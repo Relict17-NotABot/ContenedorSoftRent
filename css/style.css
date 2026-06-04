@@ -4,7 +4,7 @@
 /*Html*/
 html {
   scroll-behavior: smooth;
-  background-image: url(/img/berry.jpg);
+  background-image: url(img/berry.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
