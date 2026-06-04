@@ -24,21 +24,7 @@ body {
   background-color: white;
 }
 
- /*Header*/
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 1920px;
-    padding: 0 100px;
-    height: auto;
-    background: rgba(131, 22, 8, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 999;
-}
-
+ 
 header nav{
   width: 70%;
 }

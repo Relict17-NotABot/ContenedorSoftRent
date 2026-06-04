@@ -1,0 +1,27 @@
+.side-header {
+    background-color: rgba(131, 22, 8, 0.8);
+    color: whiteSmoke;
+    padding: 18px 0;
+    border-bottom: 2px solid rgb(199, 86, 86);
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 1000;
+    
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo{
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
