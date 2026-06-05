@@ -3,8 +3,9 @@
 footer{
     width: 100%;
     height: auto;
-    padding: 0 100px;
+    padding: 20px 100px;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     background-color: #3f0423;
 }
@@ -20,7 +21,34 @@ footer p, a{
     font-size: 2rem;
 }
 
+.footer-brand .icon:hover{
+    color: var(--color-secondary);
+}
 .footer-brand img{
-    width: 200px;
+    width: 350px;
     height: auto;
+}
+
+.brand-contenedor2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-contenedor3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.brand-contenedor3 div{
+    width: 50%;
+    justify-content: flex-start;
+}
+
+
+.brand-contenedor2 img{
+    width: auto;
+    height: 100px;
 }
