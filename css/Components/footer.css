@@ -4,16 +4,23 @@ footer{
     width: 100%;
     height: auto;
     padding: 20px 100px;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    background-color: #3f0423;
+    background-color: #000000;
+    justify-content: grid;
+    gap: 50px;
 }
 footer p, a{
     font-family: 'Nunito', sans-serif;
     color: var(--color-background);
     font-weight: 200;
+    font-size: small;
     
+}
+
+footer h3{
+    font-family: 'Nunito', sans-serif;
+    color: #faf1f2;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .icon{
@@ -21,34 +28,96 @@ footer p, a{
     font-size: 2rem;
 }
 
-.footer-brand .icon:hover{
+.icon:hover{
     color: var(--color-secondary);
 }
-.footer-brand img{
-    width: 350px;
-    height: auto;
-}
 
-.brand-contenedor2 {
+
+.footer-edu{
+    display: block;
+}
+.edu-contenedor1 {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+.edu-contenedor1 img{
+    width: auto;
+    height: 100px;
+}
+.edu-contenedor2{
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px;
+    padding-top: 25px;
+}
 
-.brand-contenedor3 {
+.edu-contenedor2 div{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-.brand-contenedor3 div{
-    width: 50%;
-    justify-content: flex-start;
+    gap: 5px;
 }
 
+.footer-cont1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 
-.brand-contenedor2 img{
+.footer-logo{
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.footer-logo img{
+    width: 450px;
+    height: auto;
+}
+
+.footer-acceso{
+    width: 10%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer-acceso ul{
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-acceso ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.footer-patrocinadores{
+    width: 15%;
+    text-align: center;
+}
+
+.patrocinadores-cont{
+    display: flex;
+    gap: 10px;
+}
+
+.patrocinadores-cont img{
     width: auto;
     height: 100px;
+}
+
+.footer-cont2{
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
