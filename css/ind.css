@@ -1,0 +1,23 @@
+section {
+    width: 100%;
+    height: auto;
+    max-height: 1080px;
+}
+
+.seccion-hero {
+    background-image: url('../assets/img/bgIndex.jpg');
+    background-size: cover;      
+    background-position: center;  
+    background-repeat: no-repeat; 
+    overflow: visible;
+    padding-right: 50%;
+    display: grid;
+    gap: 10px;
+    height: 800px;
+}
+
+h1 {
+    font-family: 'ZenDots'; 
+    font-weight: 400;
+    font-style: normal;
+}
