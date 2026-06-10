@@ -1,0 +1,39 @@
+.seccion-hero {
+    overflow: visible;
+    padding-right: 50%;
+    display: grid;
+    gap: 10px;
+    height: 800px;
+}
+
+h1 {
+    font-family: var(--play-bold); 
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-text);
+}
+
+button {
+    background-color:  rgba(0, 0, 0, 0);
+    font-family: var(--play-bold);
+    font-weight: 1000;
+    font-style: normal;
+    color: var(--color-text);
+    border-color: var(--color-text);
+    border-style: solid;
+    border-radius: 15px;
+    padding: 15px 20px;
+
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--color-primary);
+    border-color: transparent;
+    color: var(--color-bg);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

@@ -3,28 +3,28 @@
 footer{
     width: 100%;
     height: auto;
-    padding: 20px 100px;
+    padding: 50px 100px;
     background-color: #000000;
     justify-content: grid;
     gap: 50px;
 }
 footer p, a{
     font-family: 'Nunito', sans-serif;
-    color: var(--color-background);
+    color: var(--color-text);
     font-weight: 200;
     font-size: small;
     
 }
 
 footer h3{
-    font-family: 'Nunito', sans-serif;
-    color: #faf1f2;
+    font-family: var(--play-bold);
+    font-weight: 700;
     font-size: 15px;
-    font-weight: 500;
+    color: var(--color-text);
 }
 
 .icon{
-    color: var(--color-background);
+    color: var(--color-text);
     font-size: 2rem;
 }
 
@@ -84,8 +84,8 @@ footer h3{
     height: auto;
     display: grid;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
 }
 .footer-acceso ul{
     padding: 0;

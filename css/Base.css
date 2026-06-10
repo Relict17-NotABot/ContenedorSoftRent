@@ -4,7 +4,6 @@
 /*Html*/
 html {
   scroll-behavior: smooth;
-  background-image: url(img/berry.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -21,7 +20,7 @@ html {
 }
 
 @font-face {
-    font-family: 'Nunito';
+    font-family: 'NunitoItalic';
     src: url('../assets/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
     font-weight: 200 1000;
     font-style: italic;
@@ -30,9 +29,15 @@ html {
 /*Para títulos*/
 
 @font-face {
-    font-family: 'ZenDots';
-    src: url('../assets/ZenDots-Regular.ttf') format('truetype');
+    font-family: 'PlayRegular';
+    src: url('//assets/fonts/Play-Regular.ttf') format('truetype');
     font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PlayBold';
+    src: url('../assets/fonts/Play-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -43,8 +48,13 @@ html {
   --color-primary: #350305;
   --color-secondary: #7d2150;
   --color-accent: #161616;
-  --color-background: #faf1f2;
-  --color-text: #A30A0E;
+  --color-text: #faf1f2;
+  --color-bg: rgba(163, 10, 14, 0.8);
+
+  --play-regular: 'PlayRegular', sans-serif;
+  --play-bold: 'PlayBold', sans-serif;
+
+  --nunito: 'Nunito', sans-serif;
 }
 
 
@@ -60,7 +70,11 @@ body {
   max-width: 1920px;
   margin: auto;
   overflow: hidden;
-  background-color: white;
+}
+
+P{
+  font-family: var(--nunito);
+  color: var(--color-text);
 }
 
  
