@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0505; font-family: Arial, sans-serif; padding: 32px 28px; }
+
+  .hub {
+    background: linear-gradient(135deg, #1e0c0c, #120808);
+    border: 1px solid #b03020;
+    border-radius: 16px;
+    padding: 20px 28px;
+    text-align: center;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  .hub::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 140px; height: 2px;
+    background: #e74c3c;
+    border-radius: 0 0 4px 4px;
+  }
+  .hub-name { font-size: 26px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+  .hub-name span { color: #e74c3c; }
+  .hub-sub { font-size: 9px; font-weight: 600; color: #e74c3c; letter-spacing: 3px; margin: 6px 0 14px; }
+  .hub-stats { display: flex; justify-content: center; gap: 24px; }
+  .hub-stat { display: flex; align-items: center; gap: 6px; font-size: 11px; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .dot-green { background: #27ae60; }
+  .dot-red { background: #e74c3c; }
+  .dot-amber { background: #e8a020; }
+  .stat-label { color: #9a6060; }
+  .stat-val { color: #d0a0a0; font-weight: 600; }
+  .hub-bar-wrap { margin: 14px auto 0; max-width: 260px; }
+  .hub-bar-track { height: 3px; background: #2a1010; border-radius: 2px; }
+  .hub-bar-fill { height: 3px; background: #e74c3c; border-radius: 2px; width: 100%; }
+  .hub-uptime { font-size: 10px; color: #6a3a3a; margin-top: 6px; }
+  .hub-uptime span { color: #e74c3c; font-weight: 600; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+
+  .card {
+    background: #110707;
+    border: 1px solid #3a1515;
+    border-radius: 10px;
+    padding: 14px 14px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 12px; right: 40%;
+    height: 1.5px;
+    background: #e74c3c;
+    opacity: 0.55;
+  }
+  .card-icon {
+    width: 26px; height: 26px;
+    border-radius: 6px;
+    background: #c0392b;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: #fff;
+    margin-bottom: 8px;
+  }
+  .card-icon.dark { background: #8b1a1a; }
+  .card-title { font-size: 11px; font-weight: 700; color: #f0d0d0; margin-bottom: 2px; line-height: 1.3; }
+  .card-sub { font-size: 9px; color: #6a3a3a; margin-bottom: 10px; }
+  .divider { height: 1px; background: #1e0e0e; margin-bottom: 10px; }
+  .feature { display: flex; align-items: flex-start; gap: 5px; margin-bottom: 6px; }
+  .feat-dot { width: 5px; height: 5px; border-radius: 50%; margin-top: 3.5px; flex-shrink: 0; }
+  .feat-dot.red { background: #e74c3c; opacity: 0.8; }
+  .feat-dot.green { background: #27ae60; opacity: 0.85; }
+  .feat-dot.teal { background: #20a89a; opacity: 0.75; }
+  .feat-text { font-size: 9px; color: #a07070; line-height: 1.4; }
+  .feat-text.green { color: #709070; }
+  .feat-text.teal { color: #609090; }
+  .saved {
+    margin-top: 10px;
+    background: rgba(39,174,96,0.08);
+    border: 1px solid rgba(39,174,96,0.2);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #4aaa70;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<!-- HUB -->
+<div class="hub">
+  <div class="hub-name">Soft<span>Rent</span></div>
+  <div class="hub-sub">AUTOMATION HUB</div>
+  <div class="hub-stats">
+    <div class="hub-stat"><div class="dot dot-green"></div><span class="stat-label">Live</span></div>
+    <div class="hub-stat"><div class="dot dot-red"></div><span class="stat-val">5 services</span><span class="stat-label"> active</span></div>
+    <div class="hub-stat"><div class="dot dot-amber"></div><span class="stat-label">Syncing</span></div>
+    <div class="hub-stat"><span class="stat-label">Uptime&nbsp;</span><span class="stat-val">99.8%</span></div>
+  </div>
+  <div class="hub-bar-wrap">
+    <div class="hub-bar-track"><div class="hub-bar-fill"></div></div>
+    <div class="hub-uptime">5 / 5 automations running · <span>all systems go</span></div>
+  </div>
+</div>
+
+<!-- SERVICE CARDS -->
+<div class="grid">
+
+  <!-- S1 WhatsApp -->
+  <div class="card">
+    <div class="card-icon">W</div>
+    <div class="card-title">WhatsApp Bot</div>
+    <div class="card-sub">Chatbot automation</div>
+    <div class="divider"></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Auto lead replies</div></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Lead qualification</div></div>
+    <div class="feature"><div class="feat-dot teal"></div><div class="feat-text teal">24/7 response</div></div>
+    <div class="saved">~9h saved / week</div>
+  </div>
+
+  <!-- S2 Social -->
+  <div class="card">
+    <div class="card-icon dark">S</div>
+    <div class="card-title">Social Auto-DM</div>
+    <div class="card-sub">Instagram & Facebook</div>
+    <div class="divider"></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Auto-reply DMs</div></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Comment triggers</div></div>
+    <div class="feature"><div class="feat-dot teal"></div><div class="feat-text teal">2 platforms synced</div></div>
+    <div class="saved">~7h saved / week</div>
+  </div>
+
+  <!-- S3 CRM -->
+  <div class="card">
+    <div class="card-icon">C</div>
+    <div class="card-title">CRM + Leads</div>
+    <div class="card-sub">Pipeline management</div>
+    <div class="divider"></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Auto lead scoring</div></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Follow-up sequences</div></div>
+    <div class="feature"><div class="feat-dot teal"></div><div class="feat-text teal">0 leads forgotten</div></div>
+    <div class="saved">~6h saved / week</div>
+  </div>
+
+  <!-- S4 Invoicing -->
+  <div class="card">
+    <div class="card-icon dark">$</div>
+    <div class="card-title">Auto Invoicing</div>
+    <div class="card-sub">Billing automation</div>
+    <div class="divider"></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Auto-send invoices</div></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Payment reminders</div></div>
+    <div class="feature"><div class="feat-dot teal"></div><div class="feat-text teal">0 missed payments</div></div>
+    <div class="saved">~8h saved / week</div>
+  </div>
+
+  <!-- S5 Dashboard -->
+  <div class="card">
+    <div class="card-icon">R</div>
+    <div class="card-title">Reports & Dashboard</div>
+    <div class="card-sub">Analytics & alerts</div>
+    <div class="divider"></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Weekly KPI reports</div></div>
+    <div class="feature"><div class="feat-dot red"></div><div class="feat-text">Business alerts</div></div>
+    <div class="feature"><div class="feat-dot teal"></div><div class="feat-text teal">↑ 18% revenue MoM</div></div>
+    <div class="saved">~5h saved / week</div>
+  </div>
+
+</div>
+</body>
+</html>

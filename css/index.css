@@ -37,3 +37,32 @@ button:hover{
 .hidden {
     display: none;
 }
+
+/* ==========================================
+    HERO SPLIT LAYOUT (CORREGIDO Y OPTIMIZADO)
+   ========================================== */
+
+
+
+/* Columna del Dashboard HTML (Derecha) */
+.hero-image {
+    flex: 1;                 /* Toma la otra mitad del contenedor (40%) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;             /* Se adapta a su columna, no a la pantalla */
+    
+}
+
+/* ESTILOS PARA EL IFRAME */
+.hero-frame {
+    width: 100%;             /* Se adapta al 100% de la columna .hero-image */
+    /* ¡CLAVE 5! Aumentamos la altura para acomodar el contenido SIN scroll gris */
+    height: 650px;           /* Ajusta este valor hasta que desaparezca el scroll */
+    border: none;           
+    border-radius: 12px;    
+    background: transparent;
+    overflow: hidden;        /* ¡CLAVE 6! Oculta el scroll gris nativo del navegador */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Sombra más fuerte para la animación */
+}
+
