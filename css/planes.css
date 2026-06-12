@@ -1,8 +1,8 @@
 /* ==========================================
-   HERO PLANES (SOLUCIÓN AL TEXTO OCULTO)
+   HERO PLANES 
    ========================================== */
 .hero-planes {
-    padding: 140px 0 40px 0; /* ¡CLAVE! 140px arriba empuja el texto abajo del header */
+    padding: 140px 0 40px 0; 
     text-align: center;
     width: 100%;
 }
@@ -31,10 +31,10 @@
 .contenedor-tarjetas {
     max-width: 1200px;
     width: 90%;
-    display: flex; /* Alinea las 3 tarjetas lado a lado */
+    display: flex; 
     justify-content: center;
-    align-items: stretch; /* Obliga a que todas midan lo mismo de alto */
-    gap: 30px; /* Separación entre tarjetas */
+    align-items: stretch; 
+    gap: 30px; 
 }
 
 /* Estilo Individual de cada tarjeta */
