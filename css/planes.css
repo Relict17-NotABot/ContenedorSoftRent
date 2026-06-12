@@ -1,7 +1,172 @@
-.divprueba{
-    background-color: white;
+/* ==========================================
+   HERO PLANES (SOLUCIÓN AL TEXTO OCULTO)
+   ========================================== */
+.hero-planes {
+    padding: 140px 0 40px 0; /* ¡CLAVE! 140px arriba empuja el texto abajo del header */
+    text-align: center;
     width: 100%;
-    height: 900px;
-     display: grid;
-  place-items: center;
+}
+
+.container-planes h2 {
+    font-size: 3rem;
+    color: var(--color-text, #ffffff);
+    margin-bottom: 10px;
+}
+
+.container-planes p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ==========================================
+   TARJETAS DE PRECIOS (LAYOUT)
+   ========================================== */
+.seccion-precios {
+    padding: 40px 0 80px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-tarjetas {
+    max-width: 1200px;
+    width: 90%;
+    display: flex; /* Alinea las 3 tarjetas lado a lado */
+    justify-content: center;
+    align-items: stretch; /* Obliga a que todas midan lo mismo de alto */
+    gap: 30px; /* Separación entre tarjetas */
+}
+
+/* Estilo Individual de cada tarjeta */
+.tarjeta-plan {
+    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px 30px;
+    flex: 1; /* Distribuye el ancho por igual (33% cada una) */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-plan:hover {
+    transform: translateY(-10px); /* Efecto de flotar al pasar el mouse */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: rgba(199, 86, 86, 0.4);
+}
+
+/* Plan Destacado (Medio) */
+.tarjeta-plan.destacado {
+    background-color: rgba(163, 10, 14, 0.1); /* Toque rojo de tu marca */
+    border: 2px solid #a30a0e;
+    transform: scale(1.03); /* Un poquito más grande para resaltar */
+}
+
+.tarjeta-plan.destacado:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+.etiqueta-popular {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #a30a0e;
+    color: white;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Elementos Internos de la Tarjeta */
+.tarjeta-plan h3 {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.precio {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.precio span {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.descripcion-plan {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+    min-height: 50px; /* Mantiene la alineación aunque varíe el texto */
+}
+
+.caracteristicas {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+    flex-grow: 1; /* Empuja el botón siempre hacia el fondo de la tarjeta */
+}
+
+.caracteristicas li {
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.caracteristicas li i {
+    color: #c75656; /* Color de checkmark */
+    margin-right: 8px;
+}
+
+/* Botones de acción */
+.btn-plan {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-plan:hover {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+.btn-destacado {
+    background-color: #a30a0e;
+    border-color: #a30a0e;
+}
+
+.btn-destacado:hover {
+    background-color: #c75656;
+    border-color: #c75656;
+    color: white;
+}
+
+/* RESPONSIVE: Tablets y Celulares */
+@media (max-width: 992px) {
+    .contenedor-tarjetas {
+        flex-direction: column; /* Se apilan verticalmente en pantallas pequeñas */
+        align-items: center;
+    }
+    .tarjeta-plan {
+        width: 100%;
+        max-width: 400px;
+    }
+    .tarjeta-plan.destacado {
+        transform: scale(1);
+    }
+    .tarjeta-plan.destacado:hover {
+        transform: translateY(-10px) scale(1);
+    }
 }
