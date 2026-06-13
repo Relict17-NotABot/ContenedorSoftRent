@@ -1,26 +1,27 @@
 .side-header {
-    background-color: rgba(255, 255, 255, 0);
-    color: whiteSmoke;
-    padding: 18px 0;
-    border-bottom: 2px solid rgb(199, 86, 86);
+  background-color: rgba(255, 255, 255, 0);
+  color: whiteSmoke;
+  padding: 18px 0;
+  border-bottom: 2px solid rgb(199, 86, 86);
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
-    z-index: 1000;
-    
+  z-index: 1000;
+
 }
 
 .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 0px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0px 100px;
 }
-.header-logo{
+
+.header-logo {
   border-radius: 15px;
   border-style: inset;
   border-color: rgba(88, 88, 88, 0.322);
@@ -28,18 +29,27 @@
   background-color: rgba(32, 2, 2, 0.37);
   padding: 10px 10px;
 }
-.header-logo:hover{
+
+.header-logo:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
- box-shadow: 0 5px 25px rgba(197, 197, 197, 0.356);
+  box-shadow: 0 5px 25px rgba(197, 197, 197, 0.356);
 }
 
-.header-logo img{
-    width: 200px;
-    height: auto;
+.header-logo img {
+  width: 200px;
+  height: auto;
 }
 
-header nav{
+.nav-menu {
   width: 70%;
+}
+
+.boton-hamburguesa {
+  display: none;
+}
+
+.menu-oculto {
+  display: none;
 }
 
 .navegacion {
@@ -51,23 +61,99 @@ header nav{
   gap: 100px;
 }
 
-.navegacion li{
+.navegacion li {
   list-style: none;
 }
 
 /* Estilo para los enlaces de navegación */
-.navegacion li a{
-  
+.navegacion li a {
   text-decoration: none;
   font-size: 1.1rem;
   font-weight: 600;
-
+  color: whiteSmoke;
   transition: all 0.3s ease;
-
 }
 
 /* Estilo para el hover de los enlaces de navegación */
-.navegacion li a:hover{
+.navegacion li a:hover {
   color: #a30a0e;
-  
+}
+
+/* Estilos Responsivos (Móviles y Tablets) */
+@media (max-width: 992px) {
+  .header-content {
+    padding: 0px 30px;
+  }
+
+  .boton-hamburguesa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+
+  .boton-hamburguesa .linea {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: whiteSmoke;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(64, 5, 23, 0.95);
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 2px solid rgb(199, 86, 86);
+  }
+
+  .menu-oculto:checked~.nav-menu {
+    max-height: 300px;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Animación de Hamburger a X */
+  .menu-oculto:checked~.boton-hamburguesa .linea:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-oculto:checked~.boton-hamburguesa .linea:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-oculto:checked~.boton-hamburguesa .linea:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .navegacion {
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+  }
+
+  .navegacion li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navegacion li a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    width: 100%;
+  }
 }
