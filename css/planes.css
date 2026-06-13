@@ -29,8 +29,7 @@
 }
 
 .contenedor-tarjetas {
-    max-width: 1200px;
-    width: 90%;
+    width: 100%;
     display: flex; 
     justify-content: center;
     align-items: stretch; 
@@ -39,32 +38,87 @@
 
 /* Estilo Individual de cada tarjeta */
 .tarjeta-plan {
-    background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil translúcido */
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 30%;
+    /*background-color: rgba(255, 255, 255, 0.05); /* Fondo sutil translúcido */
+    border: 1px solid rgba(61, 0, 0, 0.048);
     border-radius: 16px;
+    border-style: solid;
     padding: 40px 30px;
-    flex: 1; /* Distribuye el ancho por igual (33% cada una) */
+    flex: 0 0 25%;
     display: flex;
     flex-direction: column;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
+.basic{
+    background:
+        linear-gradient(
+            rgba(85, 85, 85, 0.116),
+            rgba(37, 0, 0, 0.75)
+        ),
+        url("../assets/img/disenios-02.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.inter{
+    background:
+        linear-gradient(
+            rgba(85, 85, 85, 0.116),
+            rgba(37, 0, 0, 0.75)
+        ),
+        url("../assets/img/disenios-01.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.pro{
+    background:
+        linear-gradient(
+            rgba(85, 85, 85, 0.116),
+            rgba(37, 0, 0, 0.5)
+        ),
+        url("../assets/img/disenios-03.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.tarjeta-plan img {
+    width: 250px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-plan img:hover{
+    transform: translateY(-10px); /* Efecto de flotar al pasar el mouse */
+}
 .tarjeta-plan:hover {
     transform: translateY(-10px); /* Efecto de flotar al pasar el mouse */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
     border-color: rgba(199, 86, 86, 0.4);
 }
 
 /* Plan Destacado (Medio) */
 .tarjeta-plan.destacado {
     background-color: rgba(163, 10, 14, 0.1); /* Toque rojo de tu marca */
-    border: 2px solid #a30a0e;
+    border: 2px solid var(--color-bg);
     transform: scale(1.03); /* Un poquito más grande para resaltar */
 }
 
 .tarjeta-plan.destacado:hover {
     transform: translateY(-10px) scale(1.03);
+}
+
+.tarjeta-plan h2{
+    font-family: var(--play-bold);
+    text-align: center;
+    color: var(--color-text);
 }
 
 .etiqueta-popular {

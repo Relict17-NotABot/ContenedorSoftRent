@@ -1,17 +1,4 @@
-.seccion-hero {
-    overflow: visible;
-    padding-right: 0 5%;
-    display: flex ;
-    gap: 10px;
-    height: 800px;
-}
-
-.seccion-hero > div {
-    display: flex;
-    width: 100%;
-    gap: 40px;
-    align-items: center;
-}
+/*Texto general*/
 
 h1 {
     font-family: var(--play-bold); 
@@ -20,11 +7,14 @@ h1 {
     color: var(--color-text);
 }
 
-.hero-text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+h2, h3, h4 {
+    font-family: var(--play-bold); 
+    font-style: normal;
+    color: var(--color-text);
+}
+
+.hidden {
+    display: none;
 }
 
 button {
@@ -36,7 +26,7 @@ button {
     border-color: var(--color-text);
     border-style: solid;
     border-radius: 15px;
-    padding: 15px 20px;
+    padding: 17px;
 
     transition: all 0.3s ease;
 }
@@ -48,34 +38,107 @@ button:hover{
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
+
+/*Seccion 1: Hero*/
+
+.seccion-hero {
+    overflow: visible;
+    padding-right: 0 5%;
+    display: flex ;
+    gap: 10px;
+    height: 800px;
+    padding-top: 100px;
 }
 
-/* ==========================================
-    HERO SPLIT LAYOUT (CORREGIDO Y OPTIMIZADO)
-   ========================================== */
+.seccion-hero > div {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
 
 
+.hero-text {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.hero-botones {
+    
+    display: flex;
+    gap: 50px;
+}
 
-/* Columna del Dashboard HTML (Derecha) */
+.hero-botones :nth-child(1){
+    width: 40%;
+    
+}
+
+.hero-botones :nth-child(2){
+    padding: 17px 20px;
+    width: 150px;
+}
+
+
+/* HERO SPLIT LAYOUT */
 .hero-image {
-    flex: 1;                 /* Toma la otra mitad del contenedor (40%) */
+    flex: 1;                
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;             /* Se adapta a su columna, no a la pantalla */
+    width: 100%;             
     
 }
 
 /* ESTILOS PARA EL IFRAME */
 .hero-frame {
-    width: 100%;             /* Se adapta al 100% de la columna .hero-image */
-    height: 650px;           /* Ajusta este valor hasta que desaparezca el scroll */
+    width: 100%;             
+    height: 650px;          
     border: none;           
     border-radius: 12px;    
     background: transparent;
-    overflow: hidden;        /* Oculta el scroll gris nativo del navegador */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Sombra más fuerte para la animación */
+    overflow: hidden;        
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); 
+}
+
+/*Seccion 2: Introduccion*/
+
+.seccion-introduccion{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    padding: 200px 9%;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    gap: 200px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(53, 3, 5, 0.6),
+            rgba(51, 4, 28, 0.6)
+        ),
+        url("../assets/img/disenios-02.png");
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    border-style: none;
+    border-width: 1px;
+    box-shadow:
+    inset 0 0 0 1px rgba(199, 86, 86, 0.3),
+    inset 0 0 20px rgba(163, 10, 14, 0.2);
+}
+
+.seccion-introduccion div{
+    width: 30%;
+    flex-direction: column;
+}
+
+.seccion-introduccion h2 {
+    padding-bottom: 30px;
+    font-size: 30px;
 }
 
